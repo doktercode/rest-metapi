@@ -25,9 +25,13 @@ public class MetaRepositoryImpl implements MetaRepository {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public Map get(String collection, String id) throws Exception {
 		DBCollection coll = metaConnection.getConnection(collection);
-		Map item = coll.findOne(new ObjectId(id)).toMap();
-		item.put("_id", id);
-		return item;
+		DBObject obj = coll.findOne(new ObjectId(id));
+		if(obj!=null){
+			Map item = obj.toMap();
+			item.put("_id", id);
+			return item;
+		}
+		return null;
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

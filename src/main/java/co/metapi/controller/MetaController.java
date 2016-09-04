@@ -3,6 +3,7 @@ package co.metapi.controller;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,8 @@ public class MetaController {
 
 	@Autowired
 	private MetaService metaService;
+	
+	private static final Logger logger = Logger.getLogger(MetaController.class);
 
 	@SuppressWarnings("rawtypes")
 	@RequestMapping(value = "/{collection}", method = RequestMethod.GET)
@@ -33,7 +36,7 @@ public class MetaController {
 			if(ex instanceof CollectionNotFoundException){
 				return new ResponseEntity<List<Map>>(HttpStatus.NOT_FOUND);
 			}else{
-				ex.printStackTrace();
+				logger.error("GET: /metapi/"+collection, ex);
 				return new ResponseEntity<List<Map>>(HttpStatus.INTERNAL_SERVER_ERROR);
 			}
 		}
@@ -52,7 +55,7 @@ public class MetaController {
 			if(ex instanceof CollectionNotFoundException){
 				return new ResponseEntity<Map>(HttpStatus.NOT_FOUND);
 			}else{
-				ex.printStackTrace();
+				logger.error("GET: /metapi/"+collection+"/"+id, ex);
 				return new ResponseEntity<Map>(HttpStatus.INTERNAL_SERVER_ERROR);
 			}
 		}
@@ -72,7 +75,7 @@ public class MetaController {
 			if(ex instanceof CollectionNotFoundException){
 				return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
 			}else{
-				ex.printStackTrace();
+				logger.error("POST: /metapi/"+collection, ex);
 				return new ResponseEntity<Void>(HttpStatus.INTERNAL_SERVER_ERROR);
 			}
 		}
@@ -88,7 +91,7 @@ public class MetaController {
 			if(ex instanceof CollectionNotFoundException){
 				return new ResponseEntity<List<Map>>(HttpStatus.NOT_FOUND);
 			}else{
-				ex.printStackTrace();
+				logger.error("POST: /metapi/"+collection+"/query", ex);
 				return new ResponseEntity<List<Map>>(HttpStatus.INTERNAL_SERVER_ERROR);
 			}
 		}
@@ -108,7 +111,7 @@ public class MetaController {
 				if(ex instanceof CollectionNotFoundException){
 					return new ResponseEntity<Map>(HttpStatus.NOT_FOUND);
 				}else{
-					ex.printStackTrace();
+					logger.error("PUT: /metapi/"+collection+"/"+id, ex);
 					return new ResponseEntity<Map>(HttpStatus.INTERNAL_SERVER_ERROR);
 				}
 			}
@@ -128,7 +131,7 @@ public class MetaController {
 			if(ex instanceof CollectionNotFoundException){
 				return new ResponseEntity<Map>(HttpStatus.NOT_FOUND);
 			}else{
-				ex.printStackTrace();
+				logger.error("DELETE: /metapi/"+collection+"/"+id, ex);
 				return new ResponseEntity<Map>(HttpStatus.INTERNAL_SERVER_ERROR);
 			}
 		}
