@@ -40,3 +40,6 @@ Every RESTful Webservice includes this endpoints:
 ```java
     DELETE: /{collection}/{id}
 ```
+
+## License
+The content of this project itself is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
