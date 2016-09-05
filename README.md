@@ -42,4 +42,4 @@ Every RESTful Webservice includes this endpoints:
 ```
 
 ## License
-The content of this project itself is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
+The content of this project itself is licensed under the [MIT license](LICENSE.md).
