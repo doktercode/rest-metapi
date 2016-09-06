@@ -17,6 +17,7 @@ import co.metapi.exception.CollectionNotFoundException;
 import co.metapi.service.MetaService;
 
 @Controller
+@RequestMapping("/api")
 public class MetaController {
 
 	@Autowired
