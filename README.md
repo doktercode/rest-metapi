@@ -1,4 +1,5 @@
 # rest-metapi
+[![Build Status](https://travis-ci.org/lexmartinez/rest-metapi.svg?branch=master)](https://travis-ci.org/lexmartinez/rest-metapi)
 Dynamic REST API:
 Just create a MongoDB collection and it's all.. you got a RESTful Web Service to manage that collection.
 + Avoid any back-end implementation.
