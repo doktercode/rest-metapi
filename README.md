@@ -41,7 +41,7 @@ Every RESTful Webservice includes this endpoints:
     DELETE: /api/{collection}/{id}
 ```
 ## OAuth2 Security
-This project includes an OAuth2 integration based on @neel4software [SpringSecurityOAuth2 project](https://github.com/neel4software/SpringSecurityOAuth2).
+This project includes an OAuth2 integration based on [@neel4software](https://github.com/neel4software) [SpringSecurityOAuth2 project](https://github.com/neel4software/SpringSecurityOAuth2).
 
 To use RestFul api endpoints, user must get a token access with `GET` request like that:
 
@@ -50,7 +50,7 @@ To use RestFul api endpoints, user must get a token access with `GET` request li
 ```
 > Configuration details is located on /WEB-INF/spring-security.xml
 
-Server response an JSON Object like that:
+Server response an JSON like that:
 
 ```json
 {
@@ -78,7 +78,7 @@ Add `access_token` request parameter to API request:
  http://localhost:8080/metapi/api/cities?access_token=1e9fe3f3-42bf-444a-b68c-f29e4afbd309
 ```
 
-And voil\u00E0, now our dynamic api is protected via OAuth2
+And voil&#224;, now our dynamic api is protected via OAuth2
 #####Source: http://www.beingjavaguys.com/2014/10/spring-security-oauth2-integration.html By Nagesh.Chauhan(neel4soft@gmail.com)
 
 ## License
