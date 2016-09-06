@@ -1,4 +1,5 @@
-# rest-metapi
+# rest-metapi  [![Build Status](https://travis-ci.org/lexmartinez/rest-metapi.svg?branch=master)](https://travis-ci.org/lexmartinez/rest-metapi)
+
 
 Dynamic REST API:
 Just create a MongoDB collection and it's all.. you got a RESTful Web Service to manage that collection.
@@ -7,7 +8,6 @@ Just create a MongoDB collection and it's all.. you got a RESTful Web Service to
 + No additional commands needed.
 
 #####Project Keywords: `Spring` `MongoDB` `Log4J` `RESTful` `Spring-Security` `OAuth2`
-#####TravisCI Status: [![Build Status](https://travis-ci.org/lexmartinez/rest-metapi.svg?branch=master)](https://travis-ci.org/lexmartinez/rest-metapi)
 
 ## Service Endpoints
 Every RESTful Webservice includes this endpoints:
