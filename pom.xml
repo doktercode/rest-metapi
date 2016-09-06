@@ -4,7 +4,7 @@
 	<groupId>co.metapi</groupId>
 	<artifactId>metapi</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<name>rest-metapi</name>
 	<url>http://github.com/lexmartinez/rest-metapi</url>
 	<properties>
