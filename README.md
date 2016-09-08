@@ -82,6 +82,3 @@ Add `access_token` request parameter to API request:
 
 And voil&#224;, now our dynamic api is protected via OAuth2
 #####Source: http://www.beingjavaguys.com/2014/10/spring-security-oauth2-integration.html By Nagesh.Chauhan(neel4soft@gmail.com)
-
-## License
-The content of this project itself is licensed under the [MIT license](LICENSE.md).
