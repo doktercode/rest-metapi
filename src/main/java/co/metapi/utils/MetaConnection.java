@@ -11,6 +11,8 @@ public class MetaConnection {
 	private String host;
 	private int port;
 	private String dbName;
+	private String username;
+	private String password;
 	
 	private MongoClient mongoClient;
 	private DB db;
@@ -40,10 +42,28 @@ public class MetaConnection {
 		this.dbName = dbName;
 	}
 
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@SuppressWarnings("deprecation")
 	public DBCollection getConnection(String collection) throws Exception {
 		if(mongoClient==null){
 			mongoClient = new MongoClient(host, port);
 			db = mongoClient.getDB(dbName);
+			db.authenticate(username, password.toCharArray());
 		}
 		if(db.collectionExists(collection)){
 			return db.getCollection(collection);

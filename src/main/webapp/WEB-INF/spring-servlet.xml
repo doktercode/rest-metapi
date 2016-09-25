@@ -24,9 +24,11 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 	</bean>
 	
 	<bean id="metaConnection" class="co.metapi.utils.MetaConnection" scope="singleton">
-		<property name="host"><value>127.0.0.1</value></property>
-		<property name="port"><value>27017</value></property>
-		<property name="dbName"><value>metapi</value></property>
+		<property name="host"><value>ds041536.mlab.com</value></property>
+		<property name="port"><value>41536</value></property>
+		<property name="dbName"><value>pepper-doc</value></property>
+		<property name="username"><value>pepper-doc</value></property>
+		<property name="password"><value>pepper-doc-123</value></property>
     </bean>
  
 </beans>
